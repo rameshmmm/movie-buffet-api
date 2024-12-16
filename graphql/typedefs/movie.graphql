@@ -1,0 +1,43 @@
+const movieTypeDefs = `
+    type Movie {
+        movieId: ID!
+        movieName: String!
+        genre: String!
+        favorite: String!
+        rating: Float!
+        moviePoster: String
+        moviePlot: String!
+    }
+
+    type Query {
+        movies(genre: String): [Movie!]!
+        movie(movieId: ID!): Movie
+    }
+
+    input createMovieInput {
+        movieName: String!
+        genre: String!
+        favorite: String!
+        rating: Float!
+        moviePoster: String
+        moviePlot: String!
+    }
+
+    input updateMovieInput {
+        movieId: ID!
+        movieName: String
+        genre: String
+        favorite: String
+        rating: Float
+        moviePoster: String
+        moviePlot: String
+    }
+
+    type Mutation {
+        createMovie(input: createMovieInput!): Movie!
+        updateMovie(input: updateMovieInput!): Movie!
+        deleteMovie(movieId: ID!): Movie!
+    }
+`;
+
+module.exports = { movieTypeDefs };

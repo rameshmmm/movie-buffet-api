@@ -1,0 +1,20 @@
+const userTypeDefs = `
+    input RegisterInput {
+        userName: ID!
+        password: String!
+    }
+    input LoginInput {
+        userId: ID!
+        password: String!
+    }
+    type Mutation {
+        register(input: RegisterInput!): User!
+        login(input: LoginInput!): String!
+    }
+    type User {
+        userId: ID!
+        userName: String!
+    }
+`;
+
+module.exports = { userTypeDefs };

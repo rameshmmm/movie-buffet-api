@@ -1,0 +1,6 @@
+- Replace ‘Your dbConnUrl'
+- npm i
+- npm start
+- After the above command, you can open localhost:4000 but if you don't see the full schema properly, open localhost:4000 in incognito.
+- Watch the "apollo-explorer-sample.mov" video sent to you if you are not sure how to setup auth headers or create mutations.
+- Continue to modify, add on or build new projects.
